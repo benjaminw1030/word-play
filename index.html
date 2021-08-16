@@ -1,51 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title>Grocery List</title>
+  <title>Word Play</title>
 </head>
+
 <body>
   <div class="container">
     <div>
-
-      <form id="groceryList">
-
+      <form id="sentenceForm">
+        <h4>Enter a sentence to see it scrambled!</h4>
         <div class="form-group">
-          <label for="groceryItem1">Item:</label>
-          <input id="groceryItem1" class="form-control" type="text">
+          <label for="sentence">Enter a sentence:</label>
+          <input id="sentence" class="form-control" type="text">
         </div>
-        <div class="form-group">
-          <label for="groceryItem2">Item:</label>
-          <input id="groceryItem2" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="groceryItem3">Item:</label>
-          <input id="groceryItem3" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="groceryItem4">Item:</label>
-          <input id="groceryItem4" class="form-control" type="text">
-        </div>
-        <div class="form-group">
-          <label for="groceryItem5">Item:</label>
-          <input id="groceryItem5" class="form-control" type="text">
-        </div>
-
-        <button type="submit" id="formbtn">Show list</button>
+        <button type="submit" id="formbtn">Submit</button>
       </form>
-
-     
-        
     </div>
-
-    <div id="list">
-      <h1>Your Grocery List</h1>
-      <ul id="finalList">
-      </ul>
-    </div>
+    <p id="result"></p>
   </div>
 </body>
+
 </html>

@@ -1,19 +1,11 @@
 $(document).ready(function () {
-  $("#groceryList").submit(function (event) {
+  $("#sentenceForm").submit(function (event) {
     event.preventDefault();
-    $("#groceryList").toggle();
-    $("#list").toggle();
-
-    let groceryArray = [];
-    groceryArray.push($("#groceryItem1").val(), $("#groceryItem2").val(), $("#groceryItem3").val(), $("#groceryItem4").val(), $("#groceryItem5").val());
-    let groceryCaps = [];
-    groceryArray.forEach(function (element) {
-      groceryCaps.push(element.toUpperCase());
-    });
-    groceryCaps.sort();
-
-    groceryCaps.forEach(function (element) {
-      $("ul#finalList").append("<li>" + element + "</li>");
-    });
+    const sentence = ($("#sentence").val()).split(' ');
+    const shortSentence = sentence.filter(word => word.length > 2);
+    console.log(shortSentence);
+    const reverseSentence = shortSentence.reverse();
+    console.log(reverseSentence);
+    $("#result").text(reverseSentence.join(' '));
   });
 });
